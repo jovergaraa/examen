@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="#1e2023">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ingresar Vehiculo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre Conductor</ion-label>
+      <ion-input required name ="nombre" type="text" [(ngModel)]="nombreConductor" ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Modelo Vehiculo</ion-label>
+      <ion-input required name ="modelo" type="text" [(ngModel)]="modeloVehiculo"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Capacidad Pasajeros</ion-label>
+      <ion-input required name ="cantidad pasajeros" type="number"[(ngModel)]="capacidadPasajeros"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Ruta Tomada</ion-label>
+      <ion-input required name ="modelo" type="text" [(ngModel)]="rutaTomada"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Tarifa por persona</ion-label>
+      <ion-input required name ="tarifa" type="number"[(ngModel)]="tarifa"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col> 
+        <ion-button  (click)="addVehiculo()" expand="block">ingresar un vehiculo</ion-button>
+      </ion-col> 
+    </ion-row>
+    
+  
+</ion-content>

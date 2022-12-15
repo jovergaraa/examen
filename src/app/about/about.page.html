@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="#1e2023">
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Nosotros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <div>
+      <h3>Descripcion del equipo</h3>
+      <h5>Nostros somos estudiantes de segundo año de la carrera de informática de DuocUC de la sede San Joaquin</h5>
+    </div>
+    <div>
+      <h3>Integrantes del equipo</h3> 
+    </div>
+  <ion-segment (ionChange)="segmentChanged($event)" [value]="valueSelected">
+    <ion-segment-button value="1">
+      <ion-label>Vicente Bastias</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="2">
+      <ion-label>Jose Vergara</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  
+  <div *ngIf="valueSelected == 1">
+    <ion-card>
+      <img src="assets/vichoazul.png" alt="" class="img">
+    </ion-card>
+  </div>
+  
+  <div *ngIf="valueSelected == 2">
+    <ion-card>
+      <img src="assets/233434.png" alt="" class="img">
+    </ion-card>
+  </div>
+  
+  </ion-content>  

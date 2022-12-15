@@ -1,0 +1,35 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header>Hola!</ion-list-header>
+
+            <ion-list>
+              <ion-item lines="none" [routerLink]="['/home']">
+                <ion-icon slot="start" name="home-outline"></ion-icon>Inicio</ion-item>
+
+              <ion-item lines="none" [routerLink]="['/about']">
+                <ion-icon slot="start" name="people-outline"></ion-icon>Nosotros</ion-item>
+
+              <ion-item lines="none" [routerLink]="['/ingresar-vehiculo']">
+                <ion-icon slot="start" name="car-sport-outline"></ion-icon>Ingresar un vehiculo</ion-item>
+                
+              <ion-item lines="none" [routerLink]="['/solicitar-vehiculo']">
+                <ion-icon slot="start" name="id-card-outline"></ion-icon>Solicitar un vehiculo</ion-item>
+
+              <ion-item lines="none" [routerLink]="['/clima']">
+                  <ion-icon slot="start" name="cloud-outline"></ion-icon>Clima</ion-item>
+
+              <ion-item lines="none" [routerLink]="['/convertidor']">
+                  <ion-icon slot="start" name="cash-outline"></ion-icon>Convertidor</ion-item>
+              <ion-button lines="none" (click)="salir()" routerDirection="root">
+                <ion-icon slot="start" name="exit-outline"></ion-icon>Salir</ion-button>
+            </ion-list>
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

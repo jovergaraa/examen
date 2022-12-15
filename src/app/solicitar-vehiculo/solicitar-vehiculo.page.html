@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="#1e2023">
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Solicita Un Vehiculo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Tu nombre</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Cantidad de personas</ion-label>
+      <ion-input type="text" #email required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Destino</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" (click)="onRegister(email, password)" expand="block">Solicitar vehiculo</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
